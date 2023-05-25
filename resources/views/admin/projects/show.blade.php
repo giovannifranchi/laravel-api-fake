@@ -11,7 +11,7 @@
         <h3 class="mb-3">Start date: </h3>
         <h3 class="mb-3">Extimated deadline: </h3>
         @if (isset($project->image))
-            <img src="{{ asset('storage/' . $project->image) }}" alt="{{$project->title}}">
+            <img src="{{  $project->image }}" alt="{{$project->title}}">
         @endif
     </div>
 @endsection
