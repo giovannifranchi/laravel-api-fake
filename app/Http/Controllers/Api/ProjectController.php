@@ -13,4 +13,14 @@ class ProjectController extends Controller
 
         return response()->json($data);
     }
+
+    public function show(string $slug){
+        $project = Project::with('slug', $slug)->first();
+
+        if($project){
+            return response()->json($project, 200);
+        }else {
+            return response()->json(['error'=>'file not found'], 404);
+        }
+    }
 }
